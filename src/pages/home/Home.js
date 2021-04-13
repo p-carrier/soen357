@@ -1,8 +1,14 @@
 import React from 'react';
 import './Home.css';
+
+import WeatherContainer from '../../components/WeatherContainer';
+
 const Home = () => {
   return (
-    <h1>Home</h1>
+    <div>
+      <h1>Home</h1>
+      <WeatherContainer />
+    </div>
   );
 };
 
