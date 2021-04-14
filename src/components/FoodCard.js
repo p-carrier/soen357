@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  --color: rgba( 255, 255, 255, 0.40 );
-
   position: relative;
   width: 230px;
   height: 302px;
 
   box-sizing: border-box;
-  background: --color;
+  background: var(--color, rgba( 255, 255, 255, 0.40 ));
   box-shadow: 0 8px 22px 0 rgba( 31, 38, 135, 0.27 );
   backdrop-filter: blur( 11.0px );
   -webkit-backdrop-filter: blur( 11.0px );
@@ -21,6 +19,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: 100px;
 `;
 
 const Image = styled.img`

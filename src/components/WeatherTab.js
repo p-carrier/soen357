@@ -28,30 +28,64 @@ const Dot = styled.div`
 const Button = styled.button`
   background: none;
   border: none;
+  & svg {
+    color: var(--color, 'black')
+  }
 `;
 
-const WeatherTab = () => {
-  const iconSelection = (id) => {
-    switch(id) {
-      case 0: return <Sun />;
-      case 1: return <Wind />;
-      case 2: return <Cloud />;
-      case 3: return <Rain />;
-      case 4: return <Drizzle />;
-      case 5: return <Lightning />;
-      case 6: return <Snow />;
-      default: return;
-    }
-  }
+const tabs = [
+  {
+    id: 1,
+    name: "sun",
+    cp: () => <Sun />
+  },
+  {
+    id: 2,
+    name: "wind",
+    cp: () => <Wind />
+  },
+  {
+    id: 3,
+    name: "cloud",
+    cp: () => <Cloud />
+  },
+  {
+    id: 4,
+    name: "rain",
+    cp: () => <Rain />
+  },
+  {
+    id: 5,
+    name: "drizzle",
+    cp: () => <Drizzle />
+  },
+  {
+    id: 6,
+    name: "lightning",
+    cp: () => <Lightning />
+  },
+  {
+    id: 7,
+    name: "snow",
+    cp: () => <Snow />
+  },
+]
 
+const WeatherTab = ({ dispatch, active }) => {
   return (
     <Container>
-      {[...Array(7).keys()].map(n => (
+      {tabs.map(({id, name, cp}) => (
         <>
-          <Button>
-            {iconSelection(n)}
+          <Button
+            onClick={() => dispatch({ type: name, active: id })} 
+            key={id}
+            style={ id === active ? {
+              '--color': 'red'
+            } : {}}
+          >
+            {cp()}
           </Button>
-          {n !== 6 && <Dot />}
+          {id !== 7 && <Dot key={`${id}-dot`} />}
         </>
       ))}
     </Container>

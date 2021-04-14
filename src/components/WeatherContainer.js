@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import styled from 'styled-components';
 
 import WeatherTab from './WeatherTab';
 import FoodCard from './FoodCard';
+import { Foods } from '../db/Food'
 
 const Container = styled.div`
   max-width: 1200px;
@@ -10,49 +11,44 @@ const Container = styled.div`
 `;
 
 const CardContainer = styled.div`
-  padding-top: 100px;
   display: flex;
   justify-content: space-between;
 `;
 
-const Foods = [
-  {
-    id: 1,
-    img: './img/food1.png',
-    name: 'Mini Pancake',
-    desc: 'Lorme ipsum',
-    restaurant: 'Papa John\'s'
-  },
-  {
-    id: 2,
-    img: './img/food1.png',
-    name: 'Mini Pancake',
-    desc: 'Lorme ipsum',
-    restaurant: 'Papa John\'s'
-  },
-  {
-    id: 3,
-    img: './img/food1.png',
-    name: 'Mini Pancake',
-    desc: 'Lorme ipsum',
-    restaurant: 'Papa John\'s'
-  },
-  {
-    id: 4,
-    img: './img/food1.png',
-    name: 'Mini Pancake',
-    desc: 'Lorme ipsum',
-    restaurant: 'Papa John\'s'
-  },
-]
+const initialState = { color: 'red', food: Foods.sun };
+
+const reducer = (state, action) => {
+  console.log(action);
+  switch(action.type) {
+    case 'sun':
+      return { color: 'red', food: Foods.sun, active: action.active };
+    case 'wind':
+      return { color: 'red', food: Foods.wind, active: action.active  };
+    case 'cloud':
+      return { color: 'red', food: Foods.cloud, active: action.active  };
+    case 'rain':
+      return { color: 'red', food: Foods.rain, active: action.active  };
+    case 'drizzle':
+      return { color: 'red', food: Foods.drizzle, active: action.active  };
+    case 'lightning':
+      return { color: 'red', food: Foods.lightning, active: action.active  };
+    case 'snow':
+      return { color: 'red', food: Foods.snow, active: action.active  };
+    default:
+      return { color: 'red', food: Foods.sun, active: 1 };
+  }
+}
+
+
 
 const WeatherContainer = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <Container>
-      <WeatherTab />
+      <WeatherTab dispatch={dispatch} active={state.active}/>
       <CardContainer>
-        {Foods.map(({id, ...props}) => <FoodCard key={id} {...props} />)}
+        {state.food.map(({id, ...props}) => <FoodCard key={id} {...props} />)}
       </CardContainer>
     </Container>
   );
