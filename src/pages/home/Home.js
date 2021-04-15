@@ -1,12 +1,13 @@
 import React from 'react';
 import './Home.css';
 
-import WeatherContainer from '../../components/WeatherContainer';
+
+import {WeatherContainer, Mood } from '../../components';
 
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <Mood/>
       <WeatherContainer />
     </div>
   );

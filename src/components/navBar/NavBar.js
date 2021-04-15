@@ -1,34 +1,30 @@
-import { useEffect } from 'react';
-import { Link, BrowserRouter, useLocation } from 'react-router-dom';
+import { NavLink, BrowserRouter, useLocation } from 'react-router-dom';
 import './NavBar.css';
-
+import Search from '../search/Search';
 
 const NavBar = (props) => {
-    let location = useLocation();
-    
-    useEffect(() => {
-        console.log(location.pathname);
-    }, [location])
-
     return (
         <header>
             <nav>
-
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <NavLink to='/' className='not-active'>Home</NavLink>
                     </li>
                     <li>Occasion</li>
                     <li>
-                        <Link to="/resto">RestoFind</Link>
+                        <NavLink to='/resto' activeClassName='active'>RestoFind</NavLink>
                     </li>
                     <li>Contact</li>
                     <li>About</li>
                 </ul>
 
+                <button className="logout">Logout</button>
             </nav>
 
-            <button className="logout">Logout</button>
+            <div className='search'>
+                <Search />
+            </div>
+
 
         </header>
     );
