@@ -35,6 +35,6 @@ module.exports = {
       'error',
       'always'
     ],
-    'jsx-quotes': ['error', 'prefer-double']
+    'jsx-quotes': ['error', 'prefer-double'],
   }
 };
