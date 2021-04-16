@@ -10,19 +10,21 @@ import { ReactComponent as Wind } from '../img/wind.svg';
 
 const Container = styled.div`
   width: 100%;
+  height: 2.5rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   box-shadow: inset 0 0 5px 1px rgba(0,0,0,0.1);
   padding-top: 2px;
+  background-color: white;
 `;
 
 const Dot = styled.div`
   width: 4px;
   height: 4px;
   border-radius: 4px;
-  background: black;
+  background: #c4c4c4;
 `;
 
 const Button = styled.button`

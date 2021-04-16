@@ -1,0 +1,26 @@
+.search-bar{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: .2rem;
+}
+
+.search-bar input{
+    width: 35rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: .15rem;
+}
+
+.search-bar button{
+    background-color: #c4c4c4;
+    color: black;
+    border: none;
+    outline: none;
+    margin: .15rem;
+    width: 4rem;
+    border-radius: .2rem;
+}
