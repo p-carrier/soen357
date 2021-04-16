@@ -15,6 +15,7 @@ const Container = styled.div`
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 
   background-image:var(--image);
+  background-size:cover;
   display: flex;
   align-items: center;
   padding-top: 120px;
@@ -42,7 +43,7 @@ padding-top:30px;
 const RestoCard = ({ name, desc, img}) => {
 
   return (
-    <Container style={{ '--image' : img }}>
+    <Container style={{ '--image' : `url(${img})`}}>
       <Title>{name}</Title>
     </Container>
   );

@@ -62,13 +62,13 @@ const restaurants=[
     },
     {
       id: 3,
-      img: './img/food1.png',
+      img: './img/laCage.png',
       name: 'La Cage',
       desc: 'Lorme ipsum',
     },
     {
       id: 4,
-      img: './img/food1.png',
+      img: './img/stHubert.png',
       name: 'St-Hubert',
       desc: 'Lorme ipsum',
     },
