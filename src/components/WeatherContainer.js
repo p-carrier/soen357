@@ -15,10 +15,9 @@ const CardContainer = styled.div`
   justify-content: space-between;
 `;
 
-const initialState = { color: 'red', food: Foods.sun };
+const initialState = { color: 'red', food: Foods.sun, active: 1 };
 
 const reducer = (state, action) => {
-  console.log(action);
   switch(action.type) {
     case 'sun':
       return { color: 'red', food: Foods.sun, active: action.active };
