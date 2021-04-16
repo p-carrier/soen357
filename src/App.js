@@ -1,12 +1,12 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import {  Resto, Home } from './pages';
+import { Resto, Home } from './pages';
 import NavBar from './components/navBar/NavBar';
 
 function App() {
   return (
-    <BrowserRouter style={{background: '#f1f1f1'}}>
+    <BrowserRouter>
       <NavBar />
       <main>
         <div className="container">

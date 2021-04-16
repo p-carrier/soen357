@@ -4,37 +4,37 @@ import styled from 'styled-components/macro';
 const images = [
   {
     id: 1,
-    url: "./img/slider/burger1.jpg",
+    url: './img/slider/burger1.jpg',
   },
   {
     id: 2,
-    url: "./img/slider/burger2.jpg",
+    url: './img/slider/burger2.jpg',
   },
   {
     id: 3,
-    url: "./img/slider/fish1.jpg",
+    url: './img/slider/fish1.jpg',
   },
   {
     id: 4,
-    url: "./img/slider/meal1.jpg",
+    url: './img/slider/meal1.jpg',
   },
   {
     id: 5,
-    url: "./img/slider/meal2.jpg",
+    url: './img/slider/meal2.jpg',
   },
   {
     id: 6,
-    url: "./img/slider/meal3.jpg",
+    url: './img/slider/meal3.jpg',
   },
   {
     id: 7,
-    url: "./img/slider/pizza1.jpg",
+    url: './img/slider/pizza1.jpg',
   },
   {
     id: 8,
-    url: "./img/slider/salad.jpg",
+    url: './img/slider/salad.jpg',
   },
-]
+];
 
 const Container = styled.div`
   overflow: hidden;
