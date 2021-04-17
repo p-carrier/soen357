@@ -1,0 +1,47 @@
+.occasion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+.occasion-container h2{
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+.occasion-container .restaurants {
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 39% 28% 28% ;
+    grid-template-rows: 10rem 10rem;
+    grid-template-areas: 
+    'big-resto resto resto'
+    'big-resto resto resto';
+    grid-gap: 2rem;
+    height: 25rem;
+ 
+}
+
+.occasion-container .restaurants .custom-resto-card {
+    background-position: center;
+    background-size: cover;
+    border-radius: .3rem;
+    position: relative;
+}
+.occasion-container .restaurants .custom-resto-card.big-thumbnail {
+    grid-area: big-resto;
+}
+
+.occasion-container .restaurants .custom-resto-card span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: .2rem .5rem;
+    font-size: 1.2rem;
+    color: black;
+    display: inline-block;
+    background-color: #ffffff99;
+    border-radius: .1rem;
+}

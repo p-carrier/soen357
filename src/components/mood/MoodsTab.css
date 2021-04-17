@@ -1,24 +1,11 @@
-.mood-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10rem;
-}
-
-.mood-container h2 {
-    font-size: 2rem;
-    font-weight: bolder;
-}
-
-.mood-container .moods {
+.moods-tab {
     max-width: 1200px;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.mood-container .moods button {
+.moods-tab button {
     width: 11rem;
     height: 2.5rem;
     font-size: 1.5rem;
@@ -28,7 +15,11 @@
     border-radius: .3rem;
 }
 
-.mood-container .moods button:hover {
+.moods-tab button:hover {
     background-color: #ffffffbb;
     cursor: pointer;
+}
+
+.moods-tab button.active{
+    background-color: #ffffffff;  
 }
