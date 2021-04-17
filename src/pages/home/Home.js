@@ -1,15 +1,17 @@
 import React from 'react';
 import './Home.css';
 
-import ImgSlider from '../../components/ImgSlider';
-import { WeatherContainer, Mood } from '../../components';
+// import ImgSlider from '../../components/ImgSlider';
+import { WeatherContainer, MoodsContainer, OccasionContainer } from '../../components';
+
 
 const Home = () => {
   return (
     <div>
-      <ImgSlider />
-      <Mood/>
+      {/* <ImgSlider /> */}
+      <MoodsContainer />
       <WeatherContainer />
+      <OccasionContainer/>
     </div>
   );
 };

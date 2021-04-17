@@ -1,0 +1,27 @@
+.occasion-tab {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.occasion-tab button {
+    width: 11rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #ffffff99;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    text-transform: uppercase;
+}
+
+.occasion-tab button:hover {
+    background-color: #ffffffbb;
+    cursor: pointer;
+}
+
+.occasion-tab button.active{
+    background-color: #ffffffff;  
+}
