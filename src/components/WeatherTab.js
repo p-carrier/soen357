@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { ReactComponent as Cloud } from '../img/cloud.svg';
 import { ReactComponent as Drizzle } from '../img/cloud-drizzle.svg';
 import { ReactComponent as Lightning } from '../img/cloud-lightning.svg';
@@ -7,6 +7,8 @@ import { ReactComponent as Rain } from '../img/cloud-rain.svg';
 import { ReactComponent as Snow } from '../img/cloud-snow.svg';
 import { ReactComponent as Sun } from '../img/sun.svg';
 import { ReactComponent as Wind } from '../img/wind.svg';
+
+import Dot from './Dot';
 
 const Container = styled.div`
   width: 100%;
@@ -18,13 +20,6 @@ const Container = styled.div`
   box-shadow: inset 0 0 5px 1px rgba(0,0,0,0.1);
   padding-top: 2px;
   background-color: white;
-`;
-
-const Dot = styled.div`
-  width: 4px;
-  height: 4px;
-  border-radius: 4px;
-  background: #c4c4c4;
 `;
 
 const Button = styled.button`

@@ -1,8 +1,12 @@
 import React from 'react';
 
+import RestoInfoContainer from '../../components/RestoInfoContainer';
+
 const Resto = () => {
   return (
-    <div>Resto</div>
+    <div>
+      <RestoInfoContainer />
+    </div>
   );
 };
 
