@@ -47,7 +47,7 @@ const reducer = (state, action) => {
   }
 }
 
-const restaurants=[
+export const restaurants=[
   {
       id: 1,
       img: './img/pouletRouge.png',
@@ -86,7 +86,7 @@ const WeatherContainer = () => {
       <CardContainer>
         {state.food.map(({id, ...props}) => <FoodCard key={id} {...props} />)}
       </CardContainer>
-      <ContainerResto> <CardContainerResto>{restaurants.map(({id, ...props}) => <RestoCard key={id} {...props} />)}</CardContainerResto></ContainerResto>
+      <ContainerResto><CardContainerResto>{restaurants.map(({id, ...props}) => <RestoCard key={id} {...props} />)}</CardContainerResto></ContainerResto>
     </Container>
   );
 };

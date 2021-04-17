@@ -34,17 +34,14 @@ padding-top:30px;
   color: black;
 `;
 
-const RestoCard = ({ name, desc, img}) => {
+const RestaurantDisplayCard = ({ name, desc, img}) => {
 
   return (
-    
-    <a href="/RestaurantDisplay">
     <Container style={{ '--image' : `url(${img})`}}>
       <Title>{name}</Title>
     </Container>
-  </a>
   
   );
 };
 
-export default RestoCard;
+export default RestaurantDisplayCard;
