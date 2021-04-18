@@ -38,40 +38,40 @@ const Button = styled.button`
 const tabs = [
   {
     id: 1,
-    name: "sun",
-    cp: () => <Sun />
+    name: 'sun',
+    cp: function Svg(){ return <Sun />;}
   },
   {
     id: 2,
-    name: "wind",
-    cp: () => <Wind />
+    name: 'wind',
+    cp: function Svg(){ return <Wind />;}
   },
   {
     id: 3,
-    name: "cloud",
-    cp: () => <Cloud />
+    name: 'cloud',
+    cp: function Svg(){ return <Cloud />;}
   },
   {
     id: 4,
-    name: "rain",
-    cp: () => <Rain />
+    name: 'rain',
+    cp: function Svg(){ return <Rain />;}
   },
   {
     id: 5,
-    name: "drizzle",
-    cp: () => <Drizzle />
+    name: 'drizzle',
+    cp: function Svg(){ return <Drizzle />;}
   },
   {
     id: 6,
-    name: "lightning",
-    cp: () => <Lightning />
+    name: 'lightning',
+    cp: function Svg(){ return <Lightning />;}
   },
   {
     id: 7,
-    name: "snow",
-    cp: () => <Snow />
+    name: 'snow',
+    cp: function Svg(){ return <Snow />;}
   },
-]
+];
 
 const WeatherTab = ({ dispatch, active }) => {
   return (

@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import {  Resto, Home } from './pages';
+import { Resto, Home } from './pages';
 import NavBar from './components/navBar/NavBar';
 import RestaurantDisplay from './components/RestaurantDisplay';
 import RestoCard from './components/RestaurantCard'
@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <main>
-        <div className="Container">
+        <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/resto" component={Resto} />

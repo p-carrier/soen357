@@ -38,8 +38,7 @@ const Title = styled.h3`
   color: black;
 `;
 
-const FoodCard = ({ img, name, desc, restaurant}) => {
-
+const FoodCard = ({ img, name, desc }) => {
   return (
     <Container>
       <Image src={img} alt={`${name}-image`} />

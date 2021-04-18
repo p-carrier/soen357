@@ -210,4 +210,4 @@ export const Foods = {
       restaurant: 'Papa John\'s'
     },
   ],
-}
+};
