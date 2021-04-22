@@ -23,11 +23,13 @@ const MoodsContainer = () => {
         {
           state.restos.map(({ id, img, name }, index) => {
             var firstItem = index == 0;
-            return <div className={`custom-resto-card ${firstItem ? 'big-thumbnail' : ''}`} 
-              style={{'background-image':`url('${img}')`}}
-              key={id}>
-              <span>{name}</span>
-            </div>;
+            return (
+              <div key={id} className={`custom-resto-card ${firstItem ? 'big-thumbnail' : ''}`} 
+                style={{'backgroundImage':`url('${img}')`}}
+              >
+                <span>{name}</span>
+              </div>
+            );
           })
         }
       </div>

@@ -13,16 +13,8 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-// const ContainerResto = styled.div`
-// max-width: 1200px;
-// margin: auto;
-// `;
-// const CardContainerResto = styled.div`
-// display: flex;
-// justify-content: space-between;
-// `;
 
-const initialState = { color: 'red', food: Foods.sun };
+const initialState = { color: 'red', food: Foods.sun, active: 1 };
 
 const reducer = (state, action) => {
   console.log(action);
@@ -45,35 +37,6 @@ const reducer = (state, action) => {
     return { color: 'red', food: Foods.sun, active: 1 };
   }
 };
-
-// const restaurants=[
-//   {
-//     id: 1,
-//     img: './img/pouletRouge.png',
-//     name: 'Poulet Rouge',
-//     desc: 'Lorme ipsum',
-//   },
-//   {
-//     id: 2,
-//     img: './img/restaurant2.png',
-//     name: 'The Keg',
-//     desc: 'Lorme ipsum',
-//   },
-//   {
-//     id: 3,
-//     img: './img/laCage.png',
-//     name: 'La Cage',
-//     desc: 'Lorme ipsum',
-//   },
-//   {
-//     id: 4,
-//     img: './img/stHubert.png',
-//     name: 'St-Hubert',
-//     desc: 'Lorme ipsum',
-//   },
-// ];
-
-
 
 
 const WeatherContainer = () => {

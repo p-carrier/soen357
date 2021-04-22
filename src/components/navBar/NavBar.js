@@ -19,7 +19,7 @@ const NavBar = () => {
           <li>About</li>
         </ul>
 
-        <button className="logout">Logout</button>
+        <NavLink to="/login" className="logout">login</NavLink>
       </nav>
 
       <div className="search">

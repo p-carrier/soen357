@@ -7,8 +7,8 @@ const NavBar = () => {
   let location = useLocation();
   
   useEffect(() => {
-      console.log(location.pathname);
-  }, [location])
+    console.log(location.pathname);
+  }, [location]);
 
   return (
     <header>
@@ -25,10 +25,10 @@ const NavBar = () => {
           <li>About</li>
         </ul>
       </nav>
-      <Link to="/" className="logout">Logout</Link>
+      <Link to="/login" className="logout">login</Link>
 
     </header>
   );
-}
+};
 
 export default NavBar;

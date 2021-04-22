@@ -32,7 +32,7 @@ const MoodsTab = ({ dispatch, active }) => {
           key={name}
           title={name}
           className={active == name ? 'active' : ''}
-          onClick={() => dispatch({ type: name })}
+          onClick={() => dispatch({ type: 'MOOD', mood: name })}
         >{emoji}</button>)}
     </div>
   );
