@@ -4,7 +4,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Resto, Home, Login } from './pages';
 import { UserContext } from './UserContext';
 import NavBar from './components/navBar/NavBar';
-
 function App() {
   const user = useContext(UserContext);
 

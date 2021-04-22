@@ -1,8 +1,15 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
-import RestaurantDisplay from './RestaurantDisplay'
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {restaurants} from './WeatherContainer';
+import RestaurantDisplayCard from './RestaurantDisplayCard';
+const ContainerResto = styled.div`
+max-width: 1200px;
+margin: auto;
+`;
+const CardContainerResto = styled.div`
+display: flex;
+justify-content: space-between;
+`;
 const Container = styled.div`
   position: relative;
   width: 230px;
@@ -16,7 +23,7 @@ const Container = styled.div`
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 
-  background-image:var(--image);
+
   background-size:cover;
   display: flex;
   align-items: center;
@@ -24,7 +31,7 @@ const Container = styled.div`
   justify-content: flex-start;
   margin-top: 100px;
 `;
-
+  
 const Title = styled.h3`
 padding-top:30px;
   font-weight: 900;
@@ -35,17 +42,10 @@ padding-top:30px;
   color: black;
 `;
 
-const RestoCard = ({ name, desc, img}) => {
+const RestaurantDisplay = ({ name, desc, img}) => {
 
-  return (
-    
-    <a href="/RestaurantDisplay">
-    <Container style={{ '--image' : `url(${img})`}}>
-      <Title>{name}</Title>
-    </Container>
-  </a>
-  
-  );
-};
-
-export default RestoCard;
+    return (
+        <ContainerResto><CardContainerResto>{restaurants.map(({id, ...props}) => <RestaurantDisplayCard key={id} {...props} />)}</CardContainerResto></ContainerResto>
+    );
+  };
+export default RestaurantDisplay;

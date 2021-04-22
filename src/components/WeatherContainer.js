@@ -39,6 +39,36 @@ const reducer = (state, action) => {
 };
 
 
+export const restaurants=[
+  {
+    id: 1,
+    img: './img/pouletRouge.png',
+    name: 'Poulet Rouge',
+    desc: 'Lorme ipsum',
+  },
+  {
+    id: 2,
+    img: './img/restaurant2.png',
+    name: 'The Keg',
+    desc: 'Lorme ipsum',
+  },
+  {
+    id: 3,
+    img: './img/laCage.png',
+    name: 'La Cage',
+    desc: 'Lorme ipsum',
+  },
+  {
+    id: 4,
+    img: './img/stHubert.png',
+    name: 'St-Hubert',
+    desc: 'Lorme ipsum',
+  },
+];
+
+
+
+
 const WeatherContainer = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -48,6 +78,12 @@ const WeatherContainer = () => {
       <CardContainer>
         {state.food.map(({id, ...props}) => <FoodCard key={id} {...props} />)}
       </CardContainer>
+
+      {/* <ContainerResto>
+        <CardContainerResto>
+          {restaurants.map(({id, ...props}) => <RestoCard key={id} {...props} />)}
+        </CardContainerResto>
+      </ContainerResto> */}
     </Container>
   );
 };
