@@ -4,18 +4,18 @@ However, finding a right place for different ocasion is not easy in montreal and
 
 # Team members.
 ------------------------------------------
-Muahmmad Shah Newaz| Section S| ID:25067022
+Muahmmad Shah Newaz, Section SID,:25067022
 ------------------------------------------
-Philippe Carrier |Section S |ID:40153985
+Philippe Carrier, Section S, ID:40153985
 ----------------------------------------
-Omar Salahddine| Section S| ID:40095462
+Omar Salahddine, Section S, ID:40095462
 ------------------------------------------
-Mickael Bou-Samra| Section V| ID:40051348
+Mickael Bou-Samra, Section V, ID:40051348
 
 
 # Technology used.
--HTML
--CSS
+*HTML
+*CSS
 -Javascript
 -React JS
 -SQL
