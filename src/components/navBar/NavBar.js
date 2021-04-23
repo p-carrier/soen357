@@ -1,9 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
-import Search from '../search/Search';
 
-const NavBar = () => {
+const NavBar = ({ children }) => {
   return (
     <header>
       <nav>
@@ -18,15 +17,9 @@ const NavBar = () => {
           <li>Contact</li>
           <li>About</li>
         </ul>
-
         <NavLink to="/login" className="logout">login</NavLink>
       </nav>
-
-      <div className="search">
-        <Search />
-      </div>
-
-
+      { children }
     </header>
   );
 };

@@ -1,19 +1,24 @@
 import React from 'react';
 import './Home.css';
-// import restos from '../../db/Restaurants';
 
-// import ImgSlider from '../../components/ImgSlider';
-import { WeatherContainer, MoodsContainer, OccasionContainer } from '../../components';
+import PageContainer from '../../components/PageContainer';
+import { WeatherContainer, OccasionContainer } from '../../components';
 import RestoContainer from '../../components/RestoContainer';
+import Search from '../../components/search/Search';
 
 const Home = () => {
   return (
-    <div>
+    <PageContainer
+      header={() => (
+        <div className="search">
+          <Search />
+        </div>
+      )}
+    >
       <RestoContainer />
-      <MoodsContainer />
       <WeatherContainer />
       <OccasionContainer/>
-    </div>
+    </PageContainer>
   );
 };
 

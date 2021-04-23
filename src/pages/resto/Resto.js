@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import { MenuList } from '../../db/Menu';
+import PageContainer from '../../components/PageContainer';
 
 import RestoInfoContainer from '../../components/RestoInfoContainer';
 import Menu from '../../components/Menu';
@@ -41,7 +42,7 @@ const Ambiances = ['intimate', 'elegant', 'warm', 'expensive'];
 
 const Resto = () => {
   return (
-    <div>
+    <PageContainer>
       <RestoInfoContainer />
       <AmbianceContainer>
         <h2>Ambiance</h2>
@@ -50,7 +51,7 @@ const Resto = () => {
         ))}
       </AmbianceContainer>
       <Menu menu={MenuList}/>
-    </div>
+    </PageContainer>
   );
 };
 

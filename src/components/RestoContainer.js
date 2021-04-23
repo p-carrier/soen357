@@ -10,6 +10,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1em 0 2em;
   h2 {
     font-size: 2.2rem;
     font-weight: bolder;
@@ -54,6 +55,7 @@ const RLink = styled(Link)`
 
 const initialState = { mood: 'exited', restos: restos.excited };
 const reducer = (state, action) => { 
+  console.log(action);
   switch(action.type) {
   case 'MOOD':
     return { mood: action.mood, restos: restos[action.mood] };

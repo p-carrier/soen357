@@ -25,6 +25,7 @@ const Container = styled.div`
 const Button = styled.button`
   background: none;
   border: none;
+  cursor: pointer;
   & svg {
     color: var(--color, 'black')
   }
