@@ -14,8 +14,8 @@ Mickael Bou-Samra, Section V, ID:40051348
 
 
 # Technology used.
-*HTML
-*CSS
+**HTML
+**CSS
 -Javascript
 -React JS
 -SQL
