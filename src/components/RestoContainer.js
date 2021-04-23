@@ -1,10 +1,8 @@
 import React, { useReducer } from 'react';
 import styled from 'styled-components/macro';
-import restos from '../db/Restaurants';
+
 
 import { Link } from 'react-router-dom';
-
-import MoodsTab from './mood/MoodsTab';
 
 const Container = styled.div`
   display: flex;
@@ -53,26 +51,15 @@ const RLink = styled(Link)`
 
 `;
 
-const initialState = { mood: 'exited', restos: restos.excited };
-const reducer = (state, action) => { 
-  console.log(action);
-  switch(action.type) {
-  case 'MOOD':
-    return { mood: action.mood, restos: restos[action.mood] };
-  default: 
-    return state;
-  }
-  
-};
 
-const RestoContainer = () => {
+
+const RestoContainer = ({ name, reducer, initialState, el = () => {}}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  console.log(state);
   return (
     <Container>
-      <h2>Mood</h2>
-      <MoodsTab dispatch={dispatch} active={state.mood} />
+      <h2>{name}</h2>
+      {el(state, dispatch)}
       <RContainer>
         {state.restos.map(({ id, resto_id, img, name }, index) => (
           <RLink to={`restaurant/${resto_id}`} key={`rlink-${id}`} first={index === 0} img={`${img}`}>

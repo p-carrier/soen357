@@ -3,19 +3,19 @@ import './OccasionTab.css';
 
 const occasion = [
   {
-    name: 'excited',
+    name: 'date',
   },
   {
-    name: 'happy',
+    name: 'meeting',
   },
   {
-    name: 'sad', 
+    name: 'hangout', 
   },
   {
-    name: 'depressed',
+    name: 'event',
   },
   {
-    name: 'in love',
+    name: 'birthday',
   },
 ];
 
