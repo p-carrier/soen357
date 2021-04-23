@@ -14,10 +14,10 @@ Mickael Bou-Samra, Section V, ID:40051348
 
 
 # Technology used.
-**HTML
-**CSS
--Javascript
--React JS
--SQL
--VSCode 
--Github
+1. HTML
+2. CSS
+3. Javascript
+4. React JS
+5. SQL
+6. VSCode 
+7. Github
